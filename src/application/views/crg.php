@@ -8,6 +8,8 @@ $count = 0;
 			<h1>
 				Criterion Reference Grid
 				<small>Overview</small>
+				<p><small><?php echo $crg->assessment->weighting . '% ' . $crg->assessment->assessment_method . ' for <a href="' . site_url() . 'module/' . $crg->assessment->module->id . '">' . $crg->assessment->module->title; ?></a></small></p>
+
 			</h1>
 			<?php if($this->session->flashdata('success')): ?>
 				<div class="alert alert-success"><?php echo $this->session->flashdata('success'); ?></div>
@@ -128,3 +130,7 @@ $count = 0;
 		</section>
 	</div>
 </div>
+
+<?php echo '<pre>';
+print_r($crg);
+echo '</pre>'; ?>
