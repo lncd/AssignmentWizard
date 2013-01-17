@@ -2,7 +2,7 @@
 	<div class="page-header">
 		<h1>
 			Module Information
-			<p><small><?php echo $module->title;?></small></p>
+			<p><small><a href="<?php echo site_url();?>module/<?php echo $module->id;?>"><?php echo $module->title;?></a></small></p>
 		</h1>
 	</div>
 

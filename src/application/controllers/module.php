@@ -29,17 +29,13 @@ class Module extends CI_Controller {
 	* @return Nothing
 	* @access Public
 	*/
-	public function index()
+	public function index($module_id = NULL)
 	{
-		if($this->input->post('module') OR ($this->input->get('module')))
+		if($this->input->post('module') OR ($module_id))
 		{
 			if($this->input->post('module'))
 			{
 				$module_id = $this->input->post('module');
-			}
-			else
-			{
-				$module_id = $this->input->get('module');
 			}
 
 			$this->load->model('module_model');

@@ -11,7 +11,7 @@
 		<h1>
 			Assignment Information
 			<?php if($assignment_doc->file->id): ?>
-			<p><small><?php echo $assessment->weighting . "% " . $assessment->assessment_method . " for '" . $assessment->module->title . "'";?></small><a href="<?php echo site_url() . 'assets/assignment_documents/' . $assignment_doc->file->file ;?>" class="btn btn-large" style="float:right">Download PDF</a><p>
+			<p><small><?php echo $assessment->weighting . "% " . $assessment->assessment_method . " for '";?><a href="<?php echo site_url();?>/module/<?php echo $assessment->module->id;?>"><?php echo $assessment->module->title ;?></a>'</small><a href="<?php echo site_url() . 'assets/assignment_documents/' . $assignment_doc->file->file ;?>" class="btn btn-large" style="float:right">Download PDF</a><p>
 			<?php else: ?>
 			<p><small><?php echo $assessment->weighting . "% " . $assessment->assessment_method . " for '" . $assessment->module->title . "'";?></small><p>
 		<?php endif; ?>
