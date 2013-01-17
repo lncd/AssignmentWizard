@@ -2,7 +2,7 @@
 	<div class="page-header">
 		<section>
 			<h1>
-				Criterion Reference Grid
+				<a href="<?php echo site_url(); ?>/criterion_grid/<?php echo $row->overview->criterion_reference_grid_id;?>">Criterion Reference Grid</a>
 				<small>Row Details</small>
 			</h1>
 		</section>
@@ -37,3 +37,7 @@
 		</section>
 	</div>
 </div>
+
+<?php echo '<pre>';
+print_r($row);
+echo '</pre>'; ?>
